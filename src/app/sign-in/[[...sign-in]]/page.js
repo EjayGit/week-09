@@ -7,11 +7,6 @@ export default function SignUpPage() {
     <>
         <h1>Sign in page</h1>
         <SignIn/>
-        <form>
-            <input type="text" name="nickname" />
-            <textarea type="text" name="bio" />
-            <input type="number" name="age" />
-        </form>
     </>
   );
 }
