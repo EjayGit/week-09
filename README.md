@@ -11,11 +11,15 @@
 ## Requirements
 
     🎯 Set up user sign-up and user login using Clerk.
+    COMPLETED
     🎯 Create and display an error/not found page if the user visits a page that doesn’t exist.
+    COMPLETED
     🎯 Use 1 or more Radix UI Primitive component, or something similar (e.g. use of a different component library to enhance UX, not just Tailwind).
+    COMPLETED
     🎯 Enable users to create a user profile, and input profile information (such as a user biography) using a form. Users and user information should be stored in their own table in the database and handled with an appropriate route.
+    COMPLETED
     🎯 Enable users to create posts associated with their Clerk userId. Posts should be displayed on the user’s profile page.
-
+    COMPLETED
 
 ## Stretch User Stories
 
@@ -35,4 +39,16 @@
     🏹 Let users follow each other by establishing a follower and followee relationship between profiles.
     🏹 Enable users to like posts by linking their user_id to the liked_post in a junction table.
     🏹 Ensure that a user’s biography cannot be left blank. If a user logs in without one, prompt them to add this information.
+    COMPLETED
     🏹 Create and display an error/not found page if the user visits another users profile that doesn’t exist.
+
+## Reflections
+
+- Requesting feedback about a specific part of your submission.
+I thought about what I could do with a JOIN call in the DB but no useful ideas came forward. What sort of JOIN calls might you make that would be useful in this app?
+- What useful external sources helped you complete the assignment (e.g Youtube tutorials)?
+Clerk docs, next.js docs, copilot for debugging (i would paste the error into copilot).
+- What errors or bugs did you encounter while completing your assignment? How did you solve them?
+Various and numerous. By reading them and tackling them one by one, and I could not solve it I asked Manny, or copilot. There were no more that 3 instances where I used this to debug.
+- What went really well and what could have gone better?
+The functionality has gone very well. The styling has gone better this week. I am quite happy, but I could have hit the stretch tasks more.

@@ -34,11 +34,11 @@ export default function CreateProfile(){
             <h1 className={'heading'}>Profile creation page</h1>
             <form className={'form'} action={handleSubmit}>
                 <label htmlFor="location">Location: </label>
-                <input className={'form-field'} type="text" name="location" />
+                <input className={'form-field'} type="text" name="location" required/>
                 <label htmlFor="age">Age: </label>
-                <input className={'form-field'} type="number" name="age" />
+                <input className={'form-field'} type="number" name="age" required/>
                 <label htmlFor="bio">User bio: </label>
-                <textarea className={'form-field'} type="text" name="bio" />
+                <textarea className={'form-field'} type="text" name="bio" required />
                 <button className={'submitBtn'}>Submit</button>
             </form>
         </>
