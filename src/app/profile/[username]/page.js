@@ -20,12 +20,18 @@ export default async function ProfilePage() {
   const user = await currentUser()
 
   // Get posts.
-  const {rows} = await db.query(`SELECT * from uboard WHERE id = $1 ORDER BY id DESC LIMIT 20`,[
+  const {rows: userrows} = await db.query(`SELECT * from uboard WHERE id = $1 ORDER BY id DESC LIMIT 20`,[
     userId
   ]);
-  const userData = rows[0];
+  const userData = userrows[0];
   //console.log(rows[0]);
-  //console.log(user.emailAddresses[0].emailAddress);
+
+  const {rows: postrows} = await db.query(`SELECT * FROM pboard WHERE uid = $1`,[
+    userId
+  ]);
+  const postData = postrows[0];
+  //console.log(postData.message);
+
   return (
     <>
       <h1>User&apos;s info</h1>
@@ -38,6 +44,8 @@ export default async function ProfilePage() {
       <div>Your unique id is {user?.id}</div>
       <div>That's right, we have labelled you too. Mwahaha...</div>
 
+      <h2>Posts</h2>
+      <div>{postData.message}</div>
       
     </>
   );
