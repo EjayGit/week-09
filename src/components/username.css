@@ -1,16 +1,35 @@
+.user-heading{
+    margin: 20px;
+    font-family: cursive;
+    font-size: x-large;
+}
+
 .profile-item{
     display: flex;
     flex-direction: column;
     width: 90dvw;
     max-width: 400px;
+    font-family: cursive;
 }
 
-.post.items{
+.post-heading{
+    margin: 20px;
+    font-family: cursive;
+    font-size: x-large;
+}
+
+.post-items{
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100dvw;
 }
 
-.post.item{
+.post-item{
+    display: flex;
+    flex-direction: column;
+    width: 90dvw;
     max-width: 1000px;
+    margin-bottom: 30px;
+    font-family: cursive;
 }

@@ -5,9 +5,9 @@
 //Tips
 //- The Clerk userId does NOT exist until the user signs up --> show sign-up and sign-in buttons first thing (e.g. your Home page can be public, the rest of routes are protected)
 import { db } from '@/utils/dbConnection';
-import {currentUser} from '@clerk/nextjs/server'
-import { auth } from '@clerk/nextjs/server'
-import '@/components/username.css'
+import {currentUser} from '@clerk/nextjs/server';
+import { auth } from '@clerk/nextjs/server';
+import '@/components/username.css';
 
 //Resources:
 // https://clerk.com/docs/reference/nextjs/app-router/current-user
@@ -35,17 +35,16 @@ export default async function ProfilePage() {
 
   return (
     <>
-      <h1>User&apos;s info</h1>
+      <h1 className={'user-heading'}>User&apos;s info</h1>
       
       <div className={'profile-item'}>Hello {userData.username}</div>
       <div className={'profile-item'}>We have got your {user?.emailAddresses[0].emailAddress}</div>
       <div className={'profile-item'}>Your age, which is {userData.age}</div>
       <div className={'profile-item'}>Your location, which is {userData.location}</div>
       <div className={'profile-item'}>And your bio: {userData.bio}</div>
-      <div className={'profile-item'}>Your unique id is {user?.id}</div>
       <div className={'profile-item'}>That's right, we have labelled you too. Mwahaha...</div>
 
-      <h2 className={''}>Posts</h2>
+      <h2 className={'post-heading'}>Posts</h2>
       {postrows.map((post) => {
         return(
           <div className={'post-items'} key={post.id}>
@@ -53,8 +52,6 @@ export default async function ProfilePage() {
           </div>
         )
       })}
-      {/* <div>{postData.message}</div> */}
-      
     </>
   );
 }

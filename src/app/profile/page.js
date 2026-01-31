@@ -1,6 +1,7 @@
 import { db } from "@/utils/dbConnection"
 import { currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
+import '@/components/profile.css'
 
 export default function CreateProfile(){
 
@@ -30,15 +31,15 @@ export default function CreateProfile(){
     }
     return(
         <>
-            <h1>Profile creation page</h1>
-            <form action={handleSubmit}>
+            <h1 className={'heading'}>Profile creation page</h1>
+            <form className={'form'} action={handleSubmit}>
                 <label htmlFor="location">Location: </label>
-                <input type="text" name="location" />
+                <input className={'form-field'} type="text" name="location" />
                 <label htmlFor="age">Age: </label>
-                <input type="number" name="age" />
+                <input className={'form-field'} type="number" name="age" />
                 <label htmlFor="bio">User bio: </label>
-                <textarea type="text" name="bio" />
-                <button>Submit</button>
+                <textarea className={'form-field'} type="text" name="bio" />
+                <button className={'submitBtn'}>Submit</button>
             </form>
         </>
     )

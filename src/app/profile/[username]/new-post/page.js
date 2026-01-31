@@ -4,6 +4,7 @@
 import { db } from "@/utils/dbConnection";
 import { redirect } from "next/navigation";
 import { auth } from '@clerk/nextjs/server';
+import '@/components/new-post.css'
 
 export default async function NewPost({params}) {
   const data = await params;
@@ -25,12 +26,10 @@ export default async function NewPost({params}) {
   
   return (
     <>
-      <h1>Create a new post!</h1>
-      <form action={handleSubmit}>
-        <label htmlFor="post">Post: </label>
-        <textarea type="text" name='post' rows="5" cols="40" placeholder="Post" required/>
-
-        <button>Submit</button>
+      <h1 className={'heading'}>Create your post...</h1>
+      <form className={'form'} action={handleSubmit}>
+        <textarea className={'textarea'} type="text" name='post' rows="5" cols="40" placeholder="Post" required/>
+        <button className={'submitBtn'}>Submit</button>
       </form>
     </>
   );
