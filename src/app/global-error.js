@@ -1,4 +1,6 @@
-'use client' // Error boundaries must be Client Components
+'use client';
+
+import Link from 'next/link';
  
 export default function GlobalError() {
   return (

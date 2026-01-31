@@ -20,7 +20,7 @@ export default async function NewPost({params}) {
       formValues.message,
       userId
     ]);
-    redirect(`/profile/${username}/posts`);
+    redirect(`/profile/${username}`);
   }
   
   return (

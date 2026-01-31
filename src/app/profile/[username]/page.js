@@ -7,6 +7,7 @@
 import { db } from '@/utils/dbConnection';
 import {currentUser} from '@clerk/nextjs/server'
 import { auth } from '@clerk/nextjs/server'
+import '@/components/username.css'
 
 //Resources:
 // https://clerk.com/docs/reference/nextjs/app-router/current-user
@@ -29,23 +30,30 @@ export default async function ProfilePage() {
   const {rows: postrows} = await db.query(`SELECT * FROM pboard WHERE uid = $1`,[
     userId
   ]);
-  const postData = postrows[0];
+  console.log(postrows);
   //console.log(postData.message);
 
   return (
     <>
       <h1>User&apos;s info</h1>
       
-      <div>Hello {userData.username}</div>
-      <div>We have got your {user?.emailAddresses[0].emailAddress}</div>
-      <div>Your age, which is {userData.age}</div>
-      <div>Your location, which is {userData.location}</div>
-      <div>And your bio: {userData.bio}</div>
-      <div>Your unique id is {user?.id}</div>
-      <div>That's right, we have labelled you too. Mwahaha...</div>
+      <div className={'profile-item'}>Hello {userData.username}</div>
+      <div className={'profile-item'}>We have got your {user?.emailAddresses[0].emailAddress}</div>
+      <div className={'profile-item'}>Your age, which is {userData.age}</div>
+      <div className={'profile-item'}>Your location, which is {userData.location}</div>
+      <div className={'profile-item'}>And your bio: {userData.bio}</div>
+      <div className={'profile-item'}>Your unique id is {user?.id}</div>
+      <div className={'profile-item'}>That's right, we have labelled you too. Mwahaha...</div>
 
-      <h2>Posts</h2>
-      <div>{postData.message}</div>
+      <h2 className={''}>Posts</h2>
+      {postrows.map((post) => {
+        return(
+          <div className={'post-items'} key={post.id}>
+            <p className={'post-item'}>{post.message}</p>
+          </div>
+        )
+      })}
+      {/* <div>{postData.message}</div> */}
       
     </>
   );

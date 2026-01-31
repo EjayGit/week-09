@@ -1,0 +1,16 @@
+.profile-item{
+    display: flex;
+    flex-direction: column;
+    width: 90dvw;
+    max-width: 400px;
+}
+
+.post.items{
+    display: flex;
+    flex-direction: column;
+    width: 100dvw;
+}
+
+.post.item{
+    max-width: 1000px;
+}

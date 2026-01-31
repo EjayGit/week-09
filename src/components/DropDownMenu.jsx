@@ -3,6 +3,7 @@ import {HamburgerMenuIcon} from "@radix-ui/react-icons";
 import {SignedIn} from '@clerk/nextjs';
 import { currentUser, auth } from "@clerk/nextjs/server";
 import Link from 'next/link';
+import './dropdownmenu.css'
 
 export default async function DropDownMenu() {
 	let username = '';

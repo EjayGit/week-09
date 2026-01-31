@@ -2,6 +2,7 @@ import Link from "next/link";
 import { auth, currentUser } from '@clerk/nextjs/server';
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 import DropDownMenu from '@/components/DropDownMenu'
+import './dropdownmenu.css'
 
 export default async function SignedOutNavbar(){
     let username = '';
@@ -12,9 +13,8 @@ export default async function SignedOutNavbar(){
     }
 
     return(
-        <div>
-            <h1>Navbar</h1>
-            <DropDownMenu/>
+        <div className={'flex flex-col items-center m-4'}>
+            <DropDownMenu />
         </div>
     )
 }

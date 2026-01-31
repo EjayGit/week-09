@@ -1,7 +1,7 @@
 export default function Navbar(){
     return(
         <>
-            <p>&copy; 2026 Blog Spot. All rights reserved.</p>
+            <p className={'m-8'}>&copy; 2026 Blog Spot. All rights reserved.</p>
         </>
     )
 }
