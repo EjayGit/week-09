@@ -37,12 +37,12 @@ export default async function ProfilePage() {
     <>
       <h1 className={'user-heading'}>User&apos;s info</h1>
       
-      <div className={'profile-item'}>Hello {userData.username}</div>
-      <div className={'profile-item'}>We have got your {user?.emailAddresses[0].emailAddress}</div>
-      <div className={'profile-item'}>Your age, which is {userData.age}</div>
-      <div className={'profile-item'}>Your location, which is {userData.location}</div>
-      <div className={'profile-item'}>And your bio: {userData.bio}</div>
-      <div className={'profile-item'}>That's right, we have labelled you too. Mwahaha...</div>
+      <p className={'profile-item'}>Hello {userData.username}</p>
+      <p className={'profile-item'}>We have got your {user?.emailAddresses[0].emailAddress}</p>
+      <p className={'profile-item'}>Your age, which is {userData.age}</p>
+      <p className={'profile-item'}>Your location, which is {userData.location}</p>
+      <p className={'profile-item'}>And your bio: {userData.bio}</p>
+      <p className={'profile-item'}>That's right, we have labelled you too. Mwahaha...</p>
 
       <h2 className={'post-heading'}>Posts</h2>
       {postrows.map((post) => {
